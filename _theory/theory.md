@@ -8,3 +8,11 @@
 - A **system call**, or a **syscall**, is when a program requests a service from the **kernel**.
 - All syscalls have an ID associated.
 - Syscall can take arguments
+
+# Sections
+- All x86_64 assembly files have 3 sections:
+    - The **.data** section: where data is defined here before compilation
+    - The **.bss** section: where data is allocated for future use
+    - The **.text** section: where the actual code that will be execute goes
+
+# Jumps, Calls & Comparisons

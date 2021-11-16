@@ -1,5 +1,8 @@
 sudo apt-get install nasm
+sudo apt-get install -y bsdmainutils 
 
 /* Compile and link */
 nasm -f elf64 -o hello.o hello.asm
 ld hello.o -o hello
+
+hexdump -C hello | head -n 20
