@@ -1,0 +1,5 @@
+sudo apt-get install nasm
+
+/* Compile and link */
+nasm -f elf64 -o hello.o hello.asm
+ld hello.o -o hello
