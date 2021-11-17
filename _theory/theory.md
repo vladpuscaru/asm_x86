@@ -16,3 +16,36 @@
     - The **.text** section: where the actual code that will be execute goes
 
 # Jumps, Calls & Comparisons
+
+# Macros (for NASM)
+- A macro is a single instructions that expands into a predefined set of instructions to perform a particular task
+- Syntax:
+    ```
+    %macro <name> <argc>
+        ...
+        <macro body>
+        ...
+    %endmacro
+    ```
+- `argc` is the number of arguments
+## Local labels in macros
+- To make a local label, you use `%%`
+    ```
+    %macro freeze 0
+    %%local
+        jmp %%local
+    %endmacro
+    ```
+# Defining values with EQU
+- `equ` is used for deifing constants for future use
+    ```
+    STDIN equ 0
+    STDOUT equ 1
+    STDERR equ 2
+    ```
+# Including External Files
+- `%include` will load an external file's code and insert it into the position in which it is included upon compilation
+- Macros and EQU definitions are often defined inside of included files
+    ```
+    %include "filename.asm"
+    ```
