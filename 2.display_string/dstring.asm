@@ -14,7 +14,7 @@ _start:
     call _print
 
     mov rax, 60
-    mov rax, 0
+    mov rdi, 0
     syscall
 
 
